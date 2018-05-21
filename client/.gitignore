@@ -2,6 +2,7 @@
 .env
 node_modules/
 /dist/
+/src/services/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

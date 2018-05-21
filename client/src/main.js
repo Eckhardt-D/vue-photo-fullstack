@@ -5,17 +5,18 @@ import App from './App'
 import router from './router'
 import store from './store'
 import firebase from 'firebase'
+import {_ID, FB_API} from './services/api'
 
 Vue.config.productionTip = false
 
 // Initialize Firebase
 var config = {
-  apiKey: process.env.FB_API,
+  apiKey: FB_API,
   authDomain: 'vuelized.firebaseapp.com',
   databaseURL: 'https://vuelized.firebaseio.com',
   projectId: 'vuelized',
   storageBucket: 'vuelized.appspot.com',
-  messagingSenderId: process.env._ID
+  messagingSenderId: _ID
 }
 
 firebase.initializeApp(config)
