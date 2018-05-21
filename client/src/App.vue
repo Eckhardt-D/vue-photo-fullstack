@@ -29,7 +29,7 @@ html {
 }
 body {
   margin: 0;
-  height: 100%;
+  min-height: 100%;
 }
 
 #logo {
@@ -48,6 +48,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  height:auto;
 }
 
 main {
@@ -77,6 +78,6 @@ footer {
   right: 0;
   left:0;
   bottom: 0;
-  position: fixed;
+  position: relative;
 }
 </style>

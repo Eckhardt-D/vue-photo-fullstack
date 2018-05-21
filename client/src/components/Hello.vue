@@ -17,7 +17,7 @@
     </div>
     <div class="row pull-left">
       <div class="col-lg-12">
-        <div class="mb-5">
+        <div class="my-5">
           <button @click="back" class="btn btn-primary">Previous</button>
           <button @click="next" class="btn btn-primary">Next</button>
         </div>
