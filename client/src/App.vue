@@ -2,6 +2,7 @@
   <div id="app">
     <header>
       <span>iPhoto📷</span>
+      <button v-if = "$route.name !== 'SignUp'" @click="signOut" id="logOut" type="button" class="btn btn-warning pull-right" name="button">Log Out</button>
     </header>
     <main>
       <h1 class="display-5">📷 Search beautiful, royalty free images.</h1>
@@ -16,8 +17,20 @@
 </template>
 
 <script>
+import firebase from 'firebase'
+
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+    signOut() {
+      firebase.auth().signOut().then(function() {
+         window.location = '/'
+         window.localStorage.removeItem('uid');
+      }).catch(function(error) {
+        console.log(error)
+      });
+    }
+  }
 }
 </script>
 
@@ -79,5 +92,10 @@ footer {
   left:0;
   bottom: 0;
   position: relative;
+}
+
+#logOut {
+  float: right;
+  margin-top: -27px;
 }
 </style>
